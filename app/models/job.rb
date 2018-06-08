@@ -1,4 +1,3 @@
-#Antes herdava de ActiveRecord::Base
 class Job < ApplicationRecord
 	has_many :comments
 
