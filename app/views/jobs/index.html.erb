@@ -2,7 +2,8 @@
 
 <h1>Jobs</h1>
 
-<%= render @jobs %>
+<%= render partial: 'job', collection: @jobs, cached: true %>
+<!-- <%= render @jobs %> -->
 
 <br>
 
