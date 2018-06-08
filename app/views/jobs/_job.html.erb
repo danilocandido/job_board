@@ -1,12 +1,14 @@
-<h3>
-	<%= job_title job %>
-</h3>
+<% cache job do %>
+  <h3>
+    <%= job_title job %>
+  </h3>
 
-<%= simple_format job.description%>
+  <%= simple_format job.description%>
 
-<p>
-	<%= pluralize(job.comments.size, 'comment') %>
-	<td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</p>
+  <p>
+    <%= pluralize(job.comments.size, 'comment') %>
+    <td><%= link_to 'Show', job %></td>
+      <td><%= link_to 'Edit', edit_job_path(job) %></td>
+      <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </p>
+<% end %>

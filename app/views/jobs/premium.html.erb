@@ -2,7 +2,9 @@
 
 <h1>Premium Jobs</h1>
 
-<%= render @jobs %>
+<%= render partial: 'job', collection: @jobs, cached: true %>
+<!-- <%= render @jobs %> -->
+
 <%= will_paginate @jobs%>
 
 <br>

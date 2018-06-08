@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :job
+  belongs_to :job, touch: true
   
   validates :name, presence: true
   validates :body, presence: true
